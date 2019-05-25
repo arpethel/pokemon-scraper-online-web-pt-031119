@@ -46,9 +46,14 @@ class Pokemon
 #       Pokemon.new(id: pokemon_info[0], name: pokemon_info[1], type: pokemon_info[2], hp: pokemon_info[3], db: db)
 #    end
 # binding.pry
-      new_pokemon = db.execute(sql, id_num).flatten#.each {|row| binding.pry
+      new_pokemon = db.execute(sql, id_num).flatten#.each {|row| binding.pry Pokemon.new(id)}
       # binding.pry
-      Pokemon.new(id: new_pokemon[0], db: db) #, name, type)
+      # Pokemon.new(id, db)
+      # id = row[0]
+      # name = row[1]
+      # type = row[2]
+      # binding.pry
+      Pokemon.new(id: new_pokemon[0], name: new_pokemon[1], type: new_pokemon[2], db: db) #, name, type)
       # binding.pry
     # end
   end
