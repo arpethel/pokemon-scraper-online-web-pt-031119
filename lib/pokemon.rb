@@ -13,6 +13,7 @@ class Pokemon
   end
 
   def self.save(name, type, db)
+    binding.pry
     sql = <<-SQL
       INSERT INTO pokemon (name, type, db)
       VALUES (?,?)
