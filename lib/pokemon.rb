@@ -48,7 +48,7 @@ class Pokemon
 # binding.pry
       new_pokemon = db.execute(sql, id_num)#.each {|row| binding.pry
       # binding.pry
-      Pokemon.new(id: new_pokemon[0], name, type, db: db) #, name, type)
+      Pokemon.new(id: new_pokemon[0], db: db) #, name, type)
       # binding.pry
     # end
   end
