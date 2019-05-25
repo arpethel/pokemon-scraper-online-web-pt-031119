@@ -23,6 +23,14 @@ class Pokemon
     @id = db.execute("SELECT last_insert_rowid() FROM pokemon")[0][0]
   end
 
+  def self.new_from_db(row)
+    binding.pry
+    id = row[0]
+    name = row[1]
+    type = row[2]
+    self.new(id, name, type)
+  end
+
   def self.find(id, db)
     # binding.pry
     sql = <<-SQL
@@ -33,7 +41,7 @@ class Pokemon
     SQL
 
     db.execute(sql, id).map do |row|
-      binding.pry
+      # binding.pry
     end
   end
 
