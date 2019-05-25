@@ -31,7 +31,7 @@ class Pokemon
   #   self.new(id, name, type)
   # end
 
-  def self.find(id, db)
+  def self.find(id_num, db)
     # binding.pry
     sql = <<-SQL
       SELECT *
@@ -40,14 +40,14 @@ class Pokemon
     SQL
 
 # binding.pry
-      db.execute(sql, id)#.each {|row| binding.pry Pokemon.new(id)}
+      db.execute(sql, id_num)#.each {|row| binding.pry Pokemon.new(id)}
       # binding.pry
       # Pokemon.new(id, db)
       # id = row[0]
       # name = row[1]
       # type = row[2]
       # binding.pry
-      new_pokemon = self.new(id, name, type, db) #, name, type)
+      new_pokemon = self.new(id_num, name, type, db) #, name, type)
       # binding.pry
     # end
   end
