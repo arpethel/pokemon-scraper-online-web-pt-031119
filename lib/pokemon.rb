@@ -47,7 +47,7 @@ class Pokemon
       # name = row[1]
       # type = row[2]
       # binding.pry
-      new_pokemon = self.new(id_num, name, type, db) #, name, type)
+      new_pokemon = Pokemon.new(id_num, name, type, db) #, name, type)
       # binding.pry
     # end
   end
