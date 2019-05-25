@@ -37,8 +37,8 @@ class Pokemon
       SELECT *
       FROM pokemon
       WHERE id = ?
-
     SQL
+
 # binding.pry
     Pokemon.new = db.execute(sql, id)#.each {|row| binding.pry Pokemon.new(id)}
       # binding.pry
