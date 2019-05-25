@@ -41,12 +41,12 @@ class Pokemon
     SQL
 # binding.pry
     new_pokemon = db.execute(sql, id)#.each {|row| binding.pry Pokemon.new(id)}
-      binding.pry
+      # binding.pry
       id = row[0]
       name = row[1]
       type = row[2]
       # new_pokemon = self.new(id) #, name, type)
-      # binding.pry
+      binding.pry
     # end
   end
 
