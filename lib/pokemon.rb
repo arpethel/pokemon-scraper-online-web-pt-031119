@@ -47,7 +47,7 @@ class Pokemon
       # type = row[2]
       # new_pokemon = self.new(id) #, name, type)
       # binding.pry
-    end
+    # end
   end
 
 end
