@@ -36,7 +36,7 @@ class Pokemon
     sql = <<-SQL
       SELECT *
       FROM pokemon
-      WHERE id = ?
+      WHERE id_num = ?
     SQL
 
 # binding.pry
