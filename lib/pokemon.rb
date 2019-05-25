@@ -40,7 +40,7 @@ class Pokemon
       LIMIT 1
     SQL
 binding.pry
-    db.execute(sql, id).each {|row| binding.pry Pokemon.new(row)}
+    db.execute(sql, id).each {|row| binding.pry Pokemon.new(id)}
       # binding.pry
       # id = row[0]
       # name = row[1]
